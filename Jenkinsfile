@@ -1,9 +1,5 @@
 node('docker') {
-  docker.image('centos:7').inside {
-            /*
-             * Run some tests which require MySQL, and assume that it is
-             * available on the host name `db`
-             */
-            sh 'hostname'
-        }
+  docker run docker run -t -d -u 0:0 -w /opt/jenkins-docker-slave/workspace/Containerised-pipe -v /opt/jenkins-docker-slave/workspace/Containerised-pipe:/opt/jenkins-docker-slave/workspace/Containerised-pipe:rw,z -v /opt/jenkins-docker-slave/workspace/Containerised-pipe@tmp:/opt/jenkins-docker-slave/workspace/Containerised-pipe@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** --entrypoint bash
+  sh 'hostname'
+        
 } 
