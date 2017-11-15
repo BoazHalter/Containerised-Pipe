@@ -22,7 +22,6 @@
 //}
  
  node {
-    checkout scm
 
 
         docker.image('enkinsci/slave:3.7-1').inside {
