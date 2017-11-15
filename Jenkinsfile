@@ -12,7 +12,9 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'hostname'
+                sh 
+				'''hostname
+				sleep 15'''
             }
         }
     }
