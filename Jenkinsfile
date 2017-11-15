@@ -22,7 +22,7 @@
 //}
  
  node {
- label 'docker' }
+ label 'docker' 
 
 docker.withServer('tcp://10.0.0.17:2376') {
         docker.image('jenkinsci/slave:3.7-1').inside {
