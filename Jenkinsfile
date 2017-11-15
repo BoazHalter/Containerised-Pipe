@@ -16,6 +16,7 @@
 //			git 'https://github.com/BoazHalter/Containerised-Pipe.git'
 //                sh 'touch iamhere.find'
 //				sh 'echo 'something something' > iamhere.find'
+
 //            }
 //        }
 //    }
@@ -25,6 +26,7 @@
  label 'docker' 
         docker.image('jenkinsci/slave:3.7-1').inside {
             sh 'touch iamhere.find'
-//		    sh 'echo 'something something' > iamhere.find'
+		    sh 'echo "something something" > iamhere.find'
+			
         }
 }
