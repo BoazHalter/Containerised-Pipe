@@ -6,15 +6,10 @@
 
 
 
-pipeline {
+
 node('docker') {
 
-}
-
-    agent {
         docker { image 'jenkinsci/slave:3.7-1' }
-    }
-    stages {
         stage('Test') {
             steps {
                 sh 'hostname'
@@ -22,4 +17,4 @@ node('docker') {
         }
     }
   
-} 
+ 
