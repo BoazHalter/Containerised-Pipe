@@ -7,7 +7,7 @@
 
 
 
-agent('docker') {
+agent{
 
         docker { image 'jenkinsci/slave:3.7-1' }
         stage('Test') {
