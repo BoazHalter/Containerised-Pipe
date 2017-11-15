@@ -15,7 +15,7 @@
 //			
 //			git 'https://github.com/BoazHalter/Containerised-Pipe.git'
 //                sh 'touch iamhere.find'
-//				sh 'echo something something > iamhere.find'
+//				sh 'echo 'something something' > iamhere.find'
 //            }
 //        }
 //    }
