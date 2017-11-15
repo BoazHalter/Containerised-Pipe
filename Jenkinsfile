@@ -5,20 +5,28 @@
 //}
 
 
-pipeline {
-    agent {
-        Cloud { image 'jenkinsci/slave:3.7-1' }
-    }
-    stages {
-        stage('Test') {
-            steps {
-			
-			git 'https://github.com/BoazHalter/Containerised-Pipe.git'
-                sh 'hostname'
-				sh 'read'
-            }
+//pipeline {
+//    agent {
+//        docker { image 'jenkinsci/slave:3.7-1' }
+//    }
+//    stages {
+//        stage('Test') {
+//            steps {
+//			
+//			git 'https://github.com/BoazHalter/Containerised-Pipe.git'
+//                sh 'hostname'
+//				sh 'read'
+//            }
+//        }
+//    }
+//}
+ 
+ node {
+    checkout scm
+
+
+        docker.image('enkinsci/slave:3.7-1').inside {
+            sh 'read'
         }
-    }
+
 }
- 
- 
