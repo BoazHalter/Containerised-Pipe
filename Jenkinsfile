@@ -7,7 +7,7 @@
 
 pipeline {
     agent {
-        docker { image 'jenkinsci/slave:3.7-1' }
+        Cloud { image 'jenkinsci/slave:3.7-1' }
     }
     stages {
         stage('Test') {
@@ -15,7 +15,7 @@ pipeline {
 			
 			git 'https://github.com/BoazHalter/Containerised-Pipe.git'
                 sh 'hostname'
-				sh 'sleep 15'
+				sh 'read'
             }
         }
     }
