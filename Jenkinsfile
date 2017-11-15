@@ -5,9 +5,11 @@
 //}
 
 
-node('docker'){
-pipeline {
 
+pipeline {
+node('docker') {
+
+}
 
     agent {
         docker { image 'jenkinsci/slave:3.7-1' }
@@ -21,4 +23,3 @@ pipeline {
     }
   
 } 
-}
