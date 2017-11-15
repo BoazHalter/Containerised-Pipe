@@ -7,6 +7,8 @@
 
 
 pipeline {
+build job: 'Containerised-pipe', parameters: [[$class: 'LabelParameterValue', name: 'docker', label: 'docker']]
+
     agent {
         docker { image 'jenkinsci/slave:3.7-1' }
     }
