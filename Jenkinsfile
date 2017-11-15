@@ -21,7 +21,7 @@
 //    }
 //}
  
- node {
+ node('docker') {
  label 'docker' 
 
 docker.withServer('tcp://10.0.0.17:2376') {
