@@ -14,8 +14,8 @@
 //            steps {
 //			
 //			git 'https://github.com/BoazHalter/Containerised-Pipe.git'
-//                sh 'hostname'
-//				sh 'read'
+//                sh 'touch iamhere.find'
+//				sh 'echo "something something" > iamhere.find'
 //            }
 //        }
 //    }
@@ -24,6 +24,7 @@
  node('docker') {
  label 'docker' 
         docker.image('jenkinsci/slave:3.7-1').inside {
-            sh 'sleep 600'
+            sh 'touch iamhere.find'
+//		    sh 'echo "something something" > iamhere.find'
         }
 }
