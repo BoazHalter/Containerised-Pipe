@@ -12,6 +12,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+			
+			git 'https://github.com/BoazHalter/Containerised-Pipe.git'
                 sh 'hostname'
 				sh 'sleep 15'
             }
