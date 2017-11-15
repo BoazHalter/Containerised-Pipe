@@ -8,12 +8,12 @@
 
 pipeline {
     agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'jenkinsci/slave:3.7-1' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'hostname'
             }
         }
     }
